@@ -1,0 +1,162 @@
+/**
+ * Global styling for the computing notes documentation.
+ * Keep overrides lightweight and content-first.
+ */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --ifm-font-family-base: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', 'SFMono-Regular', monospace;
+  --ifm-heading-font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --ifm-color-primary: #0b4f6c;
+  --ifm-color-primary-dark: #09455f;
+  --ifm-color-primary-darker: #083e56;
+  --ifm-color-primary-darkest: #062f41;
+  --ifm-color-primary-light: #0d5b7b;
+  --ifm-color-primary-lighter: #0f668a;
+  --ifm-color-primary-lightest: #137ba6;
+  --ifm-color-secondary: #f0a202;
+  --ifm-background-color: #f7f7f2;
+  --ifm-navbar-background-color: #f7f7f2;
+  --ifm-footer-background-color: #0b1c2c;
+  --ifm-code-font-size: 92%;
+  --ifm-code-background: #eef1f4;
+  --ifm-pre-background: #0b1c2c;
+  --ifm-card-background-color: #ffffff;
+  --ifm-toc-border-color: rgba(11, 28, 44, 0.15);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 229, 160, 0.45);
+  --note-grid-line: rgba(11, 28, 44, 0.05);
+  --note-shadow: 0 16px 40px rgba(11, 28, 44, 0.12);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #3cc7d3;
+  --ifm-color-primary-dark: #33b3be;
+  --ifm-color-primary-darker: #2fa6b1;
+  --ifm-color-primary-darkest: #24848d;
+  --ifm-color-primary-light: #52d2dd;
+  --ifm-color-primary-lighter: #64d7e1;
+  --ifm-color-primary-lightest: #8be3ea;
+  --ifm-color-secondary: #f5b041;
+  --ifm-background-color: #0b1218;
+  --ifm-navbar-background-color: #0b1218;
+  --ifm-footer-background-color: #070c11;
+  --ifm-code-background: #111a23;
+  --ifm-pre-background: #050a0f;
+  --ifm-card-background-color: #111a23;
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
+  --docusaurus-highlighted-code-line-bg: rgba(60, 199, 211, 0.2);
+  --note-grid-line: rgba(255, 255, 255, 0.06);
+  --note-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+body {
+  background-image: radial-gradient(circle at 1px 1px, var(--note-grid-line) 1px, transparent 0);
+  background-size: 24px 24px;
+  letter-spacing: 0.01em;
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(11, 28, 44, 0.12);
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar__title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.hero {
+  border-bottom: 1px solid rgba(11, 28, 44, 0.12);
+  background: linear-gradient(135deg, rgba(11, 79, 108, 0.12), rgba(240, 162, 2, 0.15));
+}
+
+[data-theme='dark'] .hero {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+  background: linear-gradient(135deg, rgba(60, 199, 211, 0.15), rgba(245, 176, 65, 0.1));
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero__subtitle {
+  color: rgba(11, 28, 44, 0.7);
+  font-size: 1.1rem;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.button--secondary {
+  background: #0b1c2c;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.button--secondary:hover {
+  background: #0f2a41;
+  color: #ffffff;
+}
+
+[data-theme='dark'] .button--secondary {
+  background: #e8f1f5;
+  color: #0b1218;
+}
+
+[data-theme='dark'] .button--secondary:hover {
+  background: #f0f6f9;
+  color: #0b1218;
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(11, 28, 44, 0.08);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right-color: rgba(255, 255, 255, 0.08);
+}
+
+.theme-doc-markdown {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  letter-spacing: 0.02em;
+}
+
+.theme-doc-markdown code {
+  border: 1px solid rgba(11, 28, 44, 0.08);
+  padding: 0.15em 0.35em;
+}
+
+[data-theme='dark'] .theme-doc-markdown code {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.theme-code-block {
+  box-shadow: var(--note-shadow);
+  border-radius: 12px;
+}
+
+.table-of-contents {
+  font-size: 0.95rem;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__title {
+  color: #ffffff;
+}
