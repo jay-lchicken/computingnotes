@@ -88,7 +88,7 @@ const config: Config = {
           label: 'Notes',
         },
         {
-          href: 'https://github.com/your-org/compnotes',
+          href: 'https://github.com/jay-lchicken/computingnotes',
           label: 'GitHub',
           position: 'right',
         },
