@@ -41,10 +41,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-org/compnotes/tree/main/',
+            'https://github.com/jay-lchicken/computingnotes/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +53,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/your-org/compnotes/tree/main/',
+            'https://github.com/jay-lchicken/computingnotes/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
