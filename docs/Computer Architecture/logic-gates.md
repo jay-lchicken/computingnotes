@@ -102,3 +102,20 @@
 | Associative | (A+B)+C = A+(B+C) |
 | Distributive | A+(B·C) = (A+B)·(A+C) |
 | De Morgan's | A+B = Ā · B̄, A·B = Ā + B̄ |
+
+### Binary Arithmetic Addition (Half Adder)
+
+We define the two output bits as:
+
+- **Carry**: \( C = A \cdot B \)
+- **Sum**: \( S = A \oplus B \)
+
+#### Truth table for Sum and Carry
+
+| A | B | C = A ∙ B | S = A ⊕ B | Binary Addition |
+|---|---|-----------|-----------|-----------------|
+| 0 | 0 |     0     |     0     | 0 + 0 = 00      |
+| 0 | 1 |     0     |     1     | 0 + 1 = 01      |
+| 1 | 0 |     0     |     1     | 1 + 0 = 01      |
+| 1 | 1 |     1     |     0     | 1 + 1 = 10      |
+
